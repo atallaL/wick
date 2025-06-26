@@ -1,1 +1,1 @@
-High fidelity mockup of ecommerce website.
+Ecommerce website UX/UI design study and (high fidelity) prototype for SEG3125 (UOttawa design course), developed using React.js.
