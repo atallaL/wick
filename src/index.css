@@ -1,0 +1,30 @@
+:root {
+  --herofont: "WindSong", sans-serif;
+  --mainfont: "EB Garamond", sans-serif;
+  --buttonfont: "Epilogue", cursive;
+  --bgcolor: #EFEFEF;
+  --textcolor: #16000D;
+  --accentcolor: #724B79;
+  --linkcolor: #FFDD80;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--bgcolor);
+}
+
+#root{
+  width: 100%;
+  height: 100%;
+  font-family: var(--mainfont);
+}
+
+button {
+  font-family: var(--buttonfont);
+  background-color: var(--textcolor);
+  color: var(--bgcolor);
+}

@@ -1,0 +1,108 @@
+.homeContainer {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+.heroSection {
+    height: 90dvh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url('../../assets/candlebg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.heroContent {
+    margin: 0 0 20px 5px;
+}
+
+.heroContent h1{
+    color: var(--bgcolor);
+    font-family: var(--herofont);
+    margin: 0;
+    font-size: 140px;
+    font-weight: 100;
+    margin-bottom: -50px;
+}
+
+.heroContent p{
+    color: var(--bgcolor);
+    margin: 0;
+    font-size: 25px;
+    font-weight: 300;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+
+.heroContent button{
+    margin: 0;
+    padding: 10px 20px;
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+    margin-left: 15px;
+    font-weight: 400;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.homeCarouselContainer {
+    max-width: 100%;
+    padding: 125px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeCarouselContainer h2{
+    font-weight: 200;
+    font-size: 45px;
+}
+
+.homeCarousel {
+    width: 100%;
+}
+
+.homeCarouselItem {
+    max-width:90%;
+    background-color: var(--bgcolor);
+    border-radius: 10px;
+    padding:0 80px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+}
+
+.homeCarouselItem img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.homeCarouselText {
+    display:flex;
+    justify-content: space-between;
+}
+
+.homeCarouselText p{
+    margin: 0;
+}
+
+/* swiper styling */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--textcolor) !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--textcolor) !important;
+  opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+
