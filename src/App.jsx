@@ -8,26 +8,33 @@ import Confirmation from "./pages/confirmation/Confirmation"
 import Checkout from "./pages/checkout/Checkout"
 import Product from "./pages/product/Product"
 //import Bottombar from "./components/Bottombar"
-//import Topbar from "./components/Topbar"
+import Topbar from "./components/Topbar"
 //import FeedbackModal from "./components/FeedbackModal"
-//import Discountbar from "./components/Discountbar"
+import Discountbar from "./components/Discountbar"
 
 
 import {Routes, Route} from 'react-router-dom'
 
 function App() {
 
+  //states
+  const [bannerVisible, setBannerVisible] = useState(true);
+
   return (
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/shop" element={<Shop/>}/>
-          <Route path="/cart" element={<Cart/>}/>
-          <Route path="/cart/confirmation" element={<Confirmation/>}/>
-          <Route path="/cart/checkout" element={<Checkout/>}/>
-          <Route path="/shop/:id" element={<Product/>}/>
-        </Routes>
-      </div>
+      <>
+        {bannerVisible && <Discountbar setBannerVisible={setBannerVisible}/>}
+        <div className="App">
+          <Topbar bannerVisible={bannerVisible}/>
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/shop" element={<Shop/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="/cart/confirmation" element={<Confirmation/>}/>
+            <Route path="/cart/checkout" element={<Checkout/>}/>
+            <Route path="/shop/:id" element={<Product/>}/>
+          </Routes>
+        </div>
+      </>
   )
 }
 

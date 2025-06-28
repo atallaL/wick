@@ -1,0 +1,72 @@
+.topbarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    background-color: var(--bgcolor);
+}
+
+.topbarContainer.bannerVisible {
+    top:35px;
+}
+
+.topbarElements {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.topbarLogoImage {
+    width: 60px;
+    opacity: 1;
+    transform: scale(0.97);
+    transition: opacity 0.3s ease;
+    will-change: opacity;
+}
+
+.topbarLogoImage:hover{
+    opacity: 0.85;
+}
+
+.topbarNav {
+    color: var(--textcolor);
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.topbarNavLinks {
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+}
+
+.topbarNavLinks p{
+    margin: 0 13px 0;
+    cursor: pointer;
+}
+
+.topbarNavLinks p:hover{
+    text-decoration: underline;
+}
+
+.topbarCart {
+    color: var(--textcolor);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.topbarCart i{
+    font-size: 20px;
+    margin-right: 3px;
+}
