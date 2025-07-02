@@ -1,0 +1,15 @@
+.shopContainer {
+    margin: 50px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.shopHeader h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.shopHeader h1 {
+    font-size: 50px;
+    margin: 0;
+}

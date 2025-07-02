@@ -7,7 +7,7 @@ import Shop from "./pages/shop/Shop"
 import Confirmation from "./pages/confirmation/Confirmation"
 import Checkout from "./pages/checkout/Checkout"
 import Product from "./pages/product/Product"
-//import Bottombar from "./components/Bottombar"
+import Bottombar from "./components/Bottombar"
 import Topbar from "./components/Topbar"
 //import FeedbackModal from "./components/FeedbackModal"
 import Discountbar from "./components/Discountbar"
@@ -22,8 +22,8 @@ function App() {
 
   return (
       <>
-        {bannerVisible && <Discountbar setBannerVisible={setBannerVisible}/>}
         <div className="App">
+          {bannerVisible && <Discountbar setBannerVisible={setBannerVisible}/>}
           <Topbar bannerVisible={bannerVisible}/>
           <Routes>
             <Route path="/" element={<Home/>}/>
@@ -33,6 +33,7 @@ function App() {
             <Route path="/cart/checkout" element={<Checkout/>}/>
             <Route path="/shop/:id" element={<Product/>}/>
           </Routes>
+          {/*<Bottombar/>*/}
         </div>
       </>
   )

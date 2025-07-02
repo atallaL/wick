@@ -24,11 +24,11 @@ const Topbar = ({bannerVisible}) => {
                     </Link>
                 </div>
                 <div className="topbarNavLinks">
-                    <p>home</p>
-                    <p>shop</p>
+                    <p onClick={() => nav('/')}>home</p>
+                    <p onClick={() => nav('/shop')}>shop</p>
                 </div>
             </div>
-            <div className="topbarCart">
+            <div className="topbarCart" onClick={() => nav('/cart')}>
                 <i className="bi bi-cart"></i>
                 <p>({inCart})</p>
             </div>

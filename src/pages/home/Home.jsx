@@ -2,6 +2,8 @@ import './Home.css'
 import herobg from '../../assets/candlebg.png'
 import productimg from '../../assets/candleproduct.jpg'
 
+import {useNavigate} from 'react-router-dom'
+
 //carousel using Swiper.js
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation, Pagination} from 'swiper/modules';
@@ -12,13 +14,17 @@ import 'swiper/css/pagination';
 
 
 function Home() {
+
+    //nav
+    const nav = useNavigate();
+
     return(
         <div className="homeContainer">
             <div className="heroSection">
                 <div className="heroContent">
                     <h1>wick.</h1>
                     <p>Beautiful candles, beautiful fragrances.</p>
-                    <button>SHOP NOW</button>
+                    <button onClick={() => nav('/shop')}>SHOP NOW</button>
                 </div>
             </div>
             <div className="homeCarouselContainer">

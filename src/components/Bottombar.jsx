@@ -1,31 +1,18 @@
 //top bar for all pages but home bc home doesnt need the little menu ico
 
 import React, {useState} from 'react';
-import './Topbar.css'
-import {Link, useNavigate} from 'react-router-dom'
+import './Bottombar.css'
+import {Link} from 'react-router-dom'
 
-import logo from '../assets/logo.png';
-
-
-const Topbar = () => {
-
-  //states
-  const [hamburgerOpen, setHamburgerOpen] = useState(false);
-
-  //navigate
-  const nav = useNavigate();
+const Bottombar = () => {
 
   return (
-    <div className="topbarContainer">
-        <div className="topbarElements">
-            <div className="topbarLogo">
-                <Link to="/">
-                  <img className="topbarLogoImage" src={logo}/>
-                </Link>
-            </div>
+    <div className="bottombarContainer">
+        <div className="bottombarText">
+            designed by <Link target="_blank" to='https://atallal.github.io/portfolio-website/'>leonardo atalla</Link>
         </div>
     </div>
   );
 };
 
-export default Topbar; 
+export default Bottombar; 
