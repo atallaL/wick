@@ -1,15 +1,18 @@
 .shopContainer {
+    width: 100%;
     margin: 50px 30px;
     display: flex;
     flex-direction: column;
+    gap: 80px;
 }
 
 .shopHeader h1 {
-    font-size: 50px;
+    font-size: 60px;
     margin: 0;
+    color: var(--textcolor);
 }
 
-.shopHeader h1 {
-    font-size: 50px;
-    margin: 0;
+.shopHeader p {
+    margin: 30px 0 0;
+    font-size: 18px;
 }

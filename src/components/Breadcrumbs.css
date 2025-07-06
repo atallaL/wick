@@ -1,0 +1,6 @@
+.breadcrumbs p {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--textcolor);
+    margin: 0;
+}

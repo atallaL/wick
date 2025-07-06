@@ -1,7 +1,7 @@
 //top bar for all pages but home bc home doesnt need the little menu ico
 
 import React, {useState, useEffect} from 'react';
-import './Discountbar.css'
+import './Breadcrumbs.css'
 import {Link, useLocation} from 'react-router-dom'
 
 
@@ -26,10 +26,10 @@ const Breadcrumbs = () => {
 
     //path
     useEffect(() => {
-        setSitepath(loc.hash.slice(1));
+        setSitepath(loc.pathname);
     },[]);
 
-    console.log(loc.hash);
+    console.log(loc.pathname);
     
     //get product name for when it needed
     const pathParts = sitepath.split('/'); //split path at slashes

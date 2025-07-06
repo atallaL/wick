@@ -1,13 +1,21 @@
 import './Shop.css'
 
 import Breadcrumbs from '../../components/Breadcrumbs'
+
 function Shop() {
+
+    const stock = {
+
+    }
+
     return(
         <div className="shopContainer">
-            <Breadcrumbs />
-            <div className="shopHeader">
-                <h1>Shop</h1>
-                <p>Scroll through our list of available products below. Use our filter system to narrow down your search.</p>
+            <div className="shopHeaderContainer">
+                <Breadcrumbs />
+                <div className="shopHeader">
+                    <h1>Shop</h1>
+                    <p>Scroll through our list of available products below. Use our filter system to narrow down your search.</p>
+                </div>
             </div>
             <div className="shopSection">
                 <div className="shopFaceted">
