@@ -37,7 +37,8 @@ const Breadcrumbs = ({productName}) => {
         <p><Link to="/">home</Link> / shop</p>,
         <p><Link to="/">home</Link> / <Link to="/shop/">shop</Link> / {productName} </p>,
         <p><Link to="/">home</Link> / shopping cart</p>,
-        <p><Link to="/">home</Link> / <Link to="/cart/">shopping cart</Link> / checkout</p> 
+        <p><Link to="/">home</Link> / <Link to="/cart/">shopping cart</Link> / checkout</p>,
+        <p><Link to="/">home</Link> / <Link to="/cart/">shopping cart</Link> / confirmation</p> 
     ]
 
     const possiblePaths = [
@@ -47,6 +48,7 @@ const Breadcrumbs = ({productName}) => {
         "/cart/checkout",
         "/cart/",
         "/cart/checkout/",
+        "/cart/confirmation",
     ]
 
     //finding correct breadcrumb
@@ -59,6 +61,8 @@ const Breadcrumbs = ({productName}) => {
             setBreadcrumb(possibleBreadcrumbs[2]);
         } else if (sitepath === possiblePaths[3] || sitepath === possiblePaths[5]) {
             setBreadcrumb(possibleBreadcrumbs[3]);
+        } else if (sitepath.includes(possiblePaths[6])) {
+            setBreadcrumb(possibleBreadcrumbs[4]);
         } else {
             setBreadcrumb(<p>{sitepath}</p>);
         }
