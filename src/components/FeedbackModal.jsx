@@ -15,7 +15,7 @@ const FeedbackModal = () => {
   useEffect(() => {
     setTimeout(() => {
       setVisible(true);
-    }, 0)
+    }, 10000)
   }, [])
 
   return (
