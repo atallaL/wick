@@ -14,7 +14,7 @@ home / cart / checkout
 
 
 
-const Breadcrumbs = () => {
+const Breadcrumbs = ({productName}) => {
 
     //location
     const loc = useLocation();
@@ -28,12 +28,9 @@ const Breadcrumbs = () => {
     useEffect(() => {
         setSitepath(loc.pathname);
     },[]);
-
-    console.log(loc.pathname);
     
     //get product name for when it needed
     const pathParts = sitepath.split('/'); //split path at slashes
-    const productName = pathParts[pathParts.length - 1] ? pathParts[pathParts.length - 1].replace(/_/g, ' ') : 'error'; //grab last element and replace all underscores with space
 
     //breadcrumbs to render depending on site path user is currently on 
     const possibleBreadcrumbs = [
@@ -52,7 +49,7 @@ const Breadcrumbs = () => {
 
     //finding correct breadcrumb
     useEffect(() => {
-        if (sitepath === possiblePaths[0]) {
+        if (sitepath === possiblePaths[0] || sitepath === possiblePaths[1]) {
             setBreadcrumb(possibleBreadcrumbs[0]);
         } else if (sitepath.includes(possiblePaths[1])) {
             setBreadcrumb(possibleBreadcrumbs[1]);

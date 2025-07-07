@@ -41,13 +41,13 @@ function Home() {
                     speed={400}
                 >
                     {/* actual elements */}
-                    {['Lush Forest', 'Sweet Treat', 'Lush thingy', 'Lush Foresdfsdfsfsdfsd', 'Lush Fordsff'].map((title, i) => (
+                    {[{title: 'Lush Forest', price: 29.99}, {title: 'Spiced Amber', price: 24.99}, {title: 'Citrus Bloom', price: 24.99}, {title: 'Lavendar Dream', price: 24.99}, {title: 'Ocean Breeze', price: 24.99}].map((item, i) => (
                         <SwiperSlide key={i}>
-                            <div className="homeCarouselItem">
-                                <img src={productimg} alt={title} />
+                            <div className="homeCarouselItem" onClick={() => nav(`/shop/product${i}`)}>
+                                <img src={productimg} alt={item.title} />
                                 <div className="homeCarouselText">
-                                    <p>{title}</p>
-                                    <p>$29.99</p>
+                                    <p>{item.title}</p>
+                                    <p>${item.price}</p>
                                 </div>
                             </div>
                         </SwiperSlide>

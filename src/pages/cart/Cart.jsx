@@ -1,10 +1,15 @@
 import './Cart.css'
 
+import Breadcrumbs from '../../components/Breadcrumbs'
+
 function Cart() {
     return(
-        <div className="cartContainer">
-            <h1>shopping cart</h1>
-        </div>
+        <>
+            <Breadcrumbs />
+            <div className="cartContainer">
+                <h1>shopping cart</h1>
+            </div>
+         </>
     )
 }
 

@@ -16,7 +16,7 @@ const Discountbar = ({setBannerVisible}) => {
   return (
     <div className="discountContainer">
         <div className="discountText">
-            <p>Don't miss out on our <strong>30% sale! <Link to="/shop/">Explore our deals.</Link></strong></p>
+            <p>Don't miss out on our <strong>30% sale! <Link to="/shop/" state={{promo: true}}>Explore our deals.</Link></strong></p>
         </div>
         <i class="bi bi-x" onClick={() => setBannerVisible(false)}></i>
     </div>

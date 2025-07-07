@@ -22,14 +22,14 @@ export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]); //cart itself
 
     //method for adding item to cart
-    const addToCart = (prod) => {
+    const addToCart = (prod, quantityToAdd) => {
         setCart(prev => {
             const inCart = prev.find(p => p.id === prod.id); //if in cart already, find it and add to quantity
             if (inCart) {
-                return prev.map(p => p.id === prod.id ? {...p, quantity: p.quantity + 1} : p) //increment quantity
+                return prev.map(p => p.id === prod.id ? {...p, quantity: p.quantity + quantityToAdd} : p) //increment quantity
             };
             //if not already in cart add new item to the thingy with quantity: 1
-            return [...prev, {...prod, quantity: 1}];
+            return [...prev, {...prod, quantity: quantityToAdd}];
         });
 
     };
@@ -51,8 +51,13 @@ export const CartProvider = ({children}) => {
         setCart([]); //empty cart
     }
 
+    //total quantity getter
+    const getTotalQuantity= () => {
+        return cart.reduce((sum, item) => sum + item.quantity, 0);
+    }
+
     return (
-        <CartContext.Provider value={{cart, addToCart, decrementQuantity, removeFromCart, clearCart}}>
+        <CartContext.Provider value={{cart, addToCart, decrementQuantity, removeFromCart, clearCart, getTotalQuantity}}>
             {children}
         </CartContext.Provider>
     );

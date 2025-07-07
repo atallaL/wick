@@ -1,10 +1,11 @@
 .shopContainer {
-    width: 100%;
-    margin: 50px 30px;
+    margin: 0 30px 50px;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 120px;
 }
+
+
 
 .shopHeader h1 {
     font-size: 60px;
@@ -15,4 +16,174 @@
 .shopHeader p {
     margin: 30px 0 0;
     font-size: 18px;
+}
+
+.shopSection {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.shopFaceted {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 100px;
+    width: 250px;
+    height: 100%;
+    padding-bottom: 100px;
+    border-right: 1px solid var(--textcolor);
+    margin-right: 30px;
+}
+
+.shopFacetedOptions {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 30px;
+}
+
+.shopFacetedSection {
+    background-color: var(--facetedbgcolor);
+    width: 90%;
+    box-shadow: 0 2px 2px var(--shadowcolor);
+    box-sizing: border-box;
+    padding: 5px 8px 15px 8px;
+}
+
+.shopFacetedSection label {
+    margin-left: 7px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--textcolor);
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.shopFacetedSection input {
+    margin: 0;
+    margin-right: 6px;
+    border-color: var(--textcolor);
+    accent-color: var(--textcolor); 
+    color: var(--textcolor);
+    width: 12px;
+}
+
+.shopFacetedSection.price input {
+    font-family: var(--mainfont);
+    border: 1px solid var(--shadowcolor);
+    border-radius: 3px;
+    width: 50px;
+    margin: 0 5px;
+}
+
+.shopFacetedSection.price input:focus {
+    outline: none;
+}
+
+.shopFacetedClear {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 90%;
+}
+
+.shopFacetedClear p {
+    color: red;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.shopFacetedSection h2 {
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0;
+    color: var(--textcolor);
+    margin-bottom: 5px;
+}
+
+.shopResultsContainer {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.shopResultsHeader h3 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.shopResults {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+    gap: 100px;
+    padding: 2rem;
+}
+
+.shopProduct {
+    cursor: pointer;
+}
+
+.productInfo p {
+    color: var(--textcolor);
+    margin: 0;
+}
+
+.productDesc{
+    margin-top: 3px;
+}
+
+.productDesc p {
+    color: var(--accentcolor);
+    font-size: 14px;
+    margin: 0;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+
+.shopResultsContainer img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .shopSection {
+        flex-direction: column;
+    }
+
+    .shopFaceted {
+        position: static;
+        border-right: none;
+        width: 100%;
+        padding-bottom: 40px
+    }
+
+    .shopFacetedOptions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .shopFacetedSection {
+        width: 100%;
+    }
+
+    .shopFacetedClear {
+        width: 100%;
+    }
+
+    .shopContainer {
+        gap: 50px;
+    }
 }

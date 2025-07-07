@@ -1,4 +1,13 @@
+.breadcrumbsContainer {
+    margin: 50px 30px 0 30px;
+}
+
+.breadcrumbsContainer, .breadcrumbs {
+    width: 200px;
+}
+
 .breadcrumbs p {
+    width: 200px;
     font-weight: 700;
     font-size: 15px;
     color: var(--textcolor);
