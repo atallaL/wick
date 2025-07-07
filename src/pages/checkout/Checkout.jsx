@@ -1,10 +1,22 @@
 import './Checkout.css'
 
+import Breadcrumbs from '../../components/Breadcrumbs'
+import {useCart} from '../../context/CartContext'
+import {useNavigate} from 'react-router-dom'
+
+import productImg from '../../assets/candleproduct.jpg';
 function Checkout() {
     return(
-        <div className="checkoutContainer">
-            <h1>checkout</h1>
-        </div>
+        <>
+            <Breadcrumbs />
+            <div className="checkoutContainer">
+                <div className="checkoutHeader">
+                    <h1>Checkout</h1>
+                    <p>Provide your shipping address and billing information and we'll get your order to you as quickly as possible.</p>
+                </div>
+
+            </div>
+        </>
     )
 }
 

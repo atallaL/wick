@@ -45,6 +45,8 @@ const Breadcrumbs = ({productName}) => {
         "/shop/",
         "/cart",
         "/cart/checkout",
+        "/cart/",
+        "/cart/checkout/",
     ]
 
     //finding correct breadcrumb
@@ -53,9 +55,9 @@ const Breadcrumbs = ({productName}) => {
             setBreadcrumb(possibleBreadcrumbs[0]);
         } else if (sitepath.includes(possiblePaths[1])) {
             setBreadcrumb(possibleBreadcrumbs[1]);
-        } else if (sitepath === possiblePaths[2]) {
+        } else if (sitepath === possiblePaths[2] || sitepath === possiblePaths[4]) {
             setBreadcrumb(possibleBreadcrumbs[2]);
-        } else if (sitepath === possiblePaths[3]) {
+        } else if (sitepath === possiblePaths[3] || sitepath === possiblePaths[5]) {
             setBreadcrumb(possibleBreadcrumbs[3]);
         } else {
             setBreadcrumb(<p>{sitepath}</p>);

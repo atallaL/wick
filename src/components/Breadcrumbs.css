@@ -7,9 +7,13 @@
 }
 
 .breadcrumbs p {
-    width: 200px;
+    width: 400px;
     font-weight: 700;
     font-size: 15px;
     color: var(--textcolor);
     margin: 0;
+}
+
+.breadcrumbs a {
+    color: #3F0226;
 }

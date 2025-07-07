@@ -220,7 +220,7 @@ function Shop() {
                 <div className="shopHeaderContainer">
                     <div className="shopHeader">
                         <h1>Shop</h1>
-                        <p>Scroll through our list of available products below. Use our filter system to narrow down your search.</p>
+                        <p>Scroll through our list of available products below. Use our filter system to narrow down your search. Once done shopping, view the cart in the top left to review your choices.</p>
                     </div>
                 </div>
                 <div className="shopSection">
