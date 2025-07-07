@@ -37,7 +37,7 @@ export const CartProvider = ({children}) => {
     //method for decrementing quantity of an item
     const decrementQuantity = (prodID) => {
         setCart(prev => {
-            return prev.map(p => p.id === prod.id ? {...p, quantity: p.quantity - 1} : p).filter(p => [p => p.quantity] > 0); //decrement quantity and remove if quantity is 0
+            return prev.map(p => p.id === prodID ? {...p, quantity: p.quantity - 1} : p).filter(p => p.quantity > 0); //decrement quantity and remove if quantity is 0
         });
     } 
 
